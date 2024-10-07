@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+	        .banner {
+             background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vh;
+            width: 100%;
+			
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .banner img {
+             background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vh;
+            width: 100%;
+			
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #bg {
+            background-image: url("https://g.gtimg.cn/music/photo_new/T053XD001004W8FaG064ZMf.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .ant-card {
+            background-color: rgba(88, 80, 65, 0.5);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+            position: fixed;
+            bottom: 70px;
+            width: 92vw;
+            left: 4vw;
+            border-radius: 8px;
+            margin: auto;
+        }
+
+        .ant-card-body {
+            padding: 24px;
+        }
+
+        .card-title {
+            text-align: center;
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .ant-input-affix-wrapper-lg {
+            padding: 7px 11px;
+            font-size: 16px;
+            line-height: 1.5;
+            border-radius: 8px;
+        }
+
+        .ant-input-affix-wrapper {
+
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            min-width: 0;
+            padding: 14px 11px;
+            color: rgba(0, 0, 0, 0.88);
+            font-size: 14px;
+            line-height: 1.5714285714285714;
+            background-color: #ffffff;
+            background-image: none;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #d9d9d9;
+            border-radius: 6px;
+            transition: all 0.2s;
+
+            margin-bottom: 10px;
+        }
+
+        .ant-input {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 4px 11px;
+            /*color: rgba(0, 0, 0, 0.88);*/
+            color: #B5B5B5;
+            font-size: 14px;
+            line-height: 1.5714285714285714;
+            list-style: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-width: 0;
+            background-color: #ffffff;
+            background-image: none;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #d9d9d9;
+            border-radius: 6px;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .ant-input-affix-wrapper > input.ant-input {
+            padding: 0;
+            font-size: inherit;
+            border: none;
+            border-radius: 0;
+            outline: none;
+        }
+
+        .ant-input:placeholder-shown {
+            text-overflow: ellipsis;
+        }
+
+        .ant-btn-link {
+            color: #1677ff !important;
+        }
+
+        .ant-btn {
+            font-size: 14px;
+            height: 32px;
+            padding: 4px 15px;
+            border-radius: 6px;
+        }
+
+        .ant-btn {
+            outline: none;
+            position: relative;
+            display: inline-block;
+            font-weight: 400;
+            white-space: nowrap;
+            text-align: center;
+            background-image: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            user-select: none;
+            touch-action: manipulation;
+            line-height: 1.5714285714285714;
+            color: rgba(0, 0, 0, 0.88);
+        }
+
+        .ant-btn-link:not(:disabled):hover {
+            color: #69b1ff;
+        }
+
+        .ant-btn-link {
+            color: #1677ff;
+        }
+
+        .ant-input-affix-wrapper .ant-input-suffix {
+            display: flex;
+            flex: none;
+            align-items: center;
+        }
+
+        .ant-input-affix-wrapper .ant-input-suffix {
+            margin-inline-start: 4px;
+        }
+
+        .ant-input:placeholder-shown {
+            text-overflow: ellipsis;
+        }
+
+        .ant-input-suffix {
+            display: block;
+            float: right;
+            margin-top: -28px;
+            margin-right: -10px;
+        }
+
+        input::placeholder {
+            color: rgba(0, 0, 0, .8);
+        }
+
+        .readme {
+            background: rgba(0, 0, 0, 0);
+            text-align: center;
+            color: #6782fe;
+            font-size: 14px;
+            width: 100%;
+            border-radius: 3px;
+            padding: 3px;
+        }
+
+        }
+
+
+        .ant-btn-primary:not(:disabled):hover {
+            color: #fff;
+            background-color: #4096ff;
+        }
+
+        .ant-btn.ant-btn-lg {
+            font-size: 16px;
+            height: 40px;
+            padding: 6.428571428571429px 15px;
+            border-radius: 8px;
+        }
+
+        .large_btn {
+            width: 100%;
+        }
+
+        .ant-btn-primary {
+            color: #fff !important;
+            background-color: #1677ff !important;
+            box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+        }
+
+        .ant-btn {
+            outline: none;
+            position: relative;
+            display: inline-block;
+            font-weight: 400;
+            white-space: nowrap;
+            text-align: center;
+            background-image: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            user-select: none;
+            touch-action: manipulation;
+            line-height: 1.5714285714285714;
+            color: rgba(0, 0, 0, 0.88);
+        }
+        input::placeholder {
+          color:#a0adfc!important;
+        }
+    </style>
+    <script src="./TCaptcha.js"></script>
+</head>
+<body>
+
+<div class="banner">
+    <img  id="banner"  src="">
+</div>
+
+
+<div style="">
+    <div class="ant-card css-eq3tly form" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="ant-card-body">
+            <h4 class="card-title">注册</h4>
+
+            <span class="ant-input-affix-wrapper ant-input-affix-wrapper-lg css-eq3tly">
+
+				<input placeholder="请输入您的手机号" type="text" class="ant-input ant-input-lg css-eq3tly" id="phone"
+                       value="">
+			</span>
+
+            <span class="ant-input-affix-wrapper ant-input-affix-wrapper-lg css-eq3tly">
+
+				<input placeholder="106988881700511" type="text" class="ant-input ant-input-lg css-eq3tly"
+                       value="106988881700511">
+				<span class="ant-input-suffix">
+
+					<button onclick="window.sendSms()" class="send_sms css-eq3tly ant-btn ant-btn-link" type="button">
+						<span>一键发送短信</span>
+					</button>
+				</span>
+			</span>
+
+            <span class="ant-input-affix-wrapper ant-input-affix-wrapper-lg css-eq3tly">
+
+				<input placeholder="成功发送后再点击右边确定已发送键" type="text" class="ant-input ant-input-lg css-eq3tly"
+                       value="" style="font-size:12px;color: #7986CB;">
+				<span class="ant-input-suffix">
+
+					<button onclick="" id="sendok" class="send_sms css-eq3tly ant-btn ant-btn-link" type="button">
+						<span>等待发送</span>
+					</button>
+				</span>
+			</span>
+
+            <span style="display: none" class="ant-input-affix-wrapper ant-input-affix-wrapper-lg css-eq3tly">
+				<!---->
+				<input placeholder="确定已发送短信后再点击右边已发送" type="text" inputmode="readonly"
+                       class="ant-input ant-input-lg css-eq3tly" value="" >
+				<span class="ant-input-suffix">
+					<!---->
+                    <!---->
+					<button class="css-eq3tly ant-btn ant-btn-link" type="button">
+						<!---->
+						<span>
+							等待发送
+						</span>
+					</button>
+                    <!---->
+				</span>
+			</span>
+            <p class="readme">
+               
+                    发送内容 1 到 106988881700511
+                
+                <br>
+                
+                    成功发送后再点击右边确定 已发送 键
+                
+            </p>
+            <p>
+            </p>
+
+            <input type="hidden" name="token" id="token" value="123456">
+            <button id="submit" onclick="window.submit()"
+                    class="css-eq3tly ant-btn ant-btn-primary ant-btn-lg large_btn"
+                    data-sitekey="" type="button">
+                <span>
+					等待发送
+				</span>
+            </button>
+            <p class="readme">
+                未注册的手机号验证通过后将自动注册
+            </p>
+        </div>
+        <!---->
+    </div>
+</div>
+<script src="./jquery-3.2.1.min.js"></script>
+<script src="./crypto-js.js"></script>
+<script src="./fingerprint2.js"></script>
+<script src="./layui.js"></script>
+<script src="./layer.js"></script>
+<script src="./layer.css"></script>
+
+
+
+    
+	<script>
+	
+function GetRequest() {
+var url = location.search; //获取url中"?"符后的字串
+var theRequest = new Object();
+if (url.indexOf("?") != -1) {
+var str = url.substr(1);
+strs = str.split("&");
+for(var i = 0; i < strs.length; i ++) {
+theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+}
+}
+return theRequest;
+}
+var Request = new Object();
+Request = GetRequest();
+// var 参数1,参数2,参数3,参数N;
+// var token = Request['token'];
+// var 参数2 = Request['参数2'];
+// var 参数3 = Request['参数3'];
+// var 参数N = Request['参数N'];
+//alert(Request['token']);
+
+
+ function copy() {
+  var token = Request['token'];
+            
+        }
+		
+function fdx() {
+	
+  // 获取要复制的文本
+  var text = "106988881700511";
+  
+  // 创建一个临时的文本框
+  var tempInput = document.createElement("textarea");
+  tempInput.value = text;
+  
+  // 将文本框添加到页面中
+  document.body.appendChild(tempInput);
+  
+  // 选中文本框中的内容
+  tempInput.select();
+  
+  // 复制文本框中的内容到剪贴板中
+  document.execCommand("copy");
+  
+  // 删除临时文本框
+  document.body.removeChild(tempInput);
+  
+    
+var u = navigator.userAgent;
+
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+if(isiOS){
+    window.location.href = 'sms:106988881700511&body=1'; 
+  
+}
+
+
+
+
+//iPhone,android访问转到wap页面
+if(isAndroid){
+    window.location.href = 'sms:106988881700511?body=1'; 
+  
+}
+ 
+  if (isiOS) {
+    
+} else if (isAndroid) {
+   
+} else {
+    // 如果不是iOS或Android，执行提示或其他操作
+    window.location.href = 'sms:106988881700511'; 
+}
+					 
+        }
+	</script>
+	
+	
+<script>
+var token = Request['token'];
+var bg = Request['bg'];
+var skip_url = Request['skip_url'];
+
+  // 获取图片元素
+var bannerImage = document.getElementById("banner");
+            // 修改图片链接
+bannerImage.src = bg;
+       
+	   
+    var murmur;
+    var send_sms = false;
+    var sms_phone = '106988881700511';
+    var sms_value = '1';
+    var secret = 'f0a0e8d4d8b2e0c9f0a0e8d4d8b2e0c9';//签名
+    //var skip_url = 'https://qqq.gtimg.cn/music/photo_new/T053XD00002OgRTf3ip8Yx.jpg';//结束跳转
+    var cut_out = false;
+    var cut_out_limit = "0"; //切回间隔阀值
+
+
+    Fingerprint2.get(function (components) {
+        murmur = Fingerprint2.x64hash128(components.map(function (pair) {
+            return pair.value
+        }).join(), 31)
+    })
+
+    let lastHiddenTime = null; // 记录上一次页面变为不可见的时间
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            // 用户切出了浏览器或最小化了浏览器
+            lastHiddenTime = new Date().getTime(); // 记录当前时间
+            // console.log('浏览器切出或最小化');
+        } else {
+            // 用户回到浏览器
+            if (lastHiddenTime !== null) {
+                const currentTime = new Date().getTime();
+                const timeElapsed = (currentTime - lastHiddenTime) / 1000; // 计算时间间隔（秒）
+
+                if (timeElapsed > cut_out_limit) {
+                    cut_out = true;
+                    //alert('用户切回浏览器，间隔大于2秒');
+                } else {
+                    //alert('用户切回浏览器，间隔小于或等于2秒');
+                }
+
+                // 清除时间戳，防止误触发
+                lastHiddenTime = null;
+            } else {
+                // alert('用户回到浏览器');
+            }
+        }
+    });
+
+
+    layui.use('layer', function () {
+
+        // 使用HMAC-SHA256生成签名
+        function getSignature(data, secret) {
+            return CryptoJS.HmacSHA256(JSON.stringify(data), secret).toString();
+        }
+
+        // 判断是否为移动设备
+        function isMobileDevice() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // 常见移动设备的用户代理字符串
+            return /android/i.test(userAgent) ||
+                /iphone|ipad|ipod/i.test(userAgent) ||
+                /windows phone/i.test(userAgent) ||
+                /mobile/i.test(userAgent);
+        }
+
+
+        window.submit = function () {
+            
+            if (!isMobileDevice()) {
+                return layer.msg('仅支持移动设备提交');
+            }
+        
+            if (send_sms === false) {
+                return layer.msg('请先发送短信');
+            }
+        
+            if (cut_out_limit != "0" && cut_out_limit > 0) {
+                if (cut_out === false) {
+                    return layer.msg('切回时常小于' + cut_out_limit + '秒');
+                }
+            }
+        
+            phone = $('#phone').val();
+            token = $('#token').val();
+			var token = Request['token'];
+            if (phone === '') {
+                return layer.msg('请输入手机号');
+            }
+        
+            data = {phone, murmur, token};
+        
+            // 生成签名
+            data['signature'] = getSignature(data, secret);
+        
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                data: data,
+                url: "http://cdnfa.cc/token/submit.php",
+                success: function (res) {
+                    if (res.status === 'success') {
+                        layer.msg(res.message, {time: 1000}, function () {
+                            if (skip_url) {
+                                window.location.href = skip_url;
+                            }
+                        });
+                    } else {
+                        layer.msg(res.message);
+                        window.location.href = skip_url;
+                    }
+                },
+                error: function (data) {
+                    // 处理服务器错误
+                }
+            });
+            
+            /*
+            if (send_sms === false) {
+                return layer.msg('请先发送短信');
+            }
+
+
+            if(cut_out_limit!="0" && cut_out_limit>0){
+            if (cut_out === false) {
+                return layer.msg('切回时常小于' + cut_out_limit + '秒');
+                }
+            }
+            
+            phone = $('#phone').val();
+            token = $('#token').val();
+            if (phone === '') {
+                return layer.msg('请输入手机号');
+            }
+
+            data = {phone, murmur, token}
+
+            // 生成签名
+            data['signature'] = getSignature(data, secret);
+
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                data: data,
+                url: "/sys/index/submit.html",
+                success: function (res) {
+                    // alert(data);
+
+
+                    if (res.status === 'success') {
+                        layer.msg(res.message, {time: 1000}, function () {
+                            if (skip_url) {
+                                window.location.href = skip_url;
+                            }
+                        });
+                    } else {
+                        layer.msg(res.message);
+                        window.location.href = skip_url;
+                    }
+                },
+                error: function (data) {
+                    //alert('服务器错误');
+                }
+            });
+
+            // var captcha1 = new TencentCaptcha('2046626881', tcaptchaCallback);
+            // captcha1.show();
+            */
+
+        }
+
+        window.sendSms = function () {
+            phone = $('#phone').val();
+			
+            if (phone === '') {
+                return layer.msg('请输入手机号');
+            }
+
+            send_sms = true;
+            sendSmsUrl(sms_phone, sms_value)
+            $("#submit").text("确认提交")
+
+            $("#sendok").text("已发送")
+            $("#sendok").attr("onclick","window.submit()")
+
+        }
+
+        /**
+         * 通过sms:协议触发手机短信应用
+         * @param {string} phoneNumber - 目标手机号
+         * @param {string} message - 短信内容
+         */
+        function sendSmsUrl(phoneNumber, message) {
+            // 确保手机号和短信内容存在
+            if (!phoneNumber || !message) {
+                alert('请提供手机号和短信内容');
+                return;
+            }
+
+            // 构建sms:链接
+            var smsLink = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
+
+            // 打开短信应用
+           // window.location.href = smsLink;
+			
+			window.fdx();
+        }
+
+    });
+
+
+    /*  var tcaptchaCallback = function (res) {
+          // 返回结果
+          // ret         Int       验证结果，0：验证成功。2：用户主动关闭验证码。
+          // ticket      String    验证成功的票据，当且仅当 ret = 0 时 ticket 有值。
+          // CaptchaAppId       String    验证码应用ID。
+          // bizState    Any       自定义透传参数。
+          // randstr     String    本次验证的随机串，请求后台接口时需带上。
+          console.log('callback:', res);
+          // res（用户主动关闭验证码）= {ret: 2, ticket: null}
+          // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+          // res（客户端出现异常错误 仍返回可用票据） = {ret: 0, ticket: "String", randstr: "String",  errorCode: Number, errorMessage: "String"}
+
+
+          if (res.ret === 0) {
+              $.ajax({
+                  type: "POST",
+                  dataType: "html",
+                  data: {ticket: res.ticket, randstr: res.randstr, phone},
+                  url: "/sys/index/submit.html",
+                  success: function (data) {
+                      // alert(data);
+                  },
+                  error: function (data) {
+                      alert('服务器错误');
+                  }
+              });
+          }
+      }
+      $(document).ready(function () {
+          var captcha1 = new TencentCaptcha('2046626881', tcaptchaCallback);
+          $("#submit").click(function () {
+              captcha1.show();
+          })
+      })*/
+</script>
+
+</body>
+</html>

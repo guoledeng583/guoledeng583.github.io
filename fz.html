@@ -1,0 +1,202 @@
+<!-- 添加viewport元标签以适应手机屏幕 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div id="vmcms">
+  <div class="powerful_code-main">
+    <div class="page-app active page" style="background: rgb(255, 255, 255);">
+      <div class="page-phone" style="background: rgb(255, 255, 255);">
+        <div class="page-render page">
+          
+          <!-- 标题区域 -->
+          <div class="page-title" style="background: linear-gradient(90deg, rgb(251, 136, 77) 0%, rgb(247, 62, 40) 100%);">
+            简单密码获取
+          </div>
+          
+          <!-- 文本内容区域 -->
+          <div class="rich-text-box-wrapper">
+            <div class="rich-text-box w-e-text-container" style="border: 1px dashed rgb(255, 76, 66);">
+              <div class="editor-content-view">
+                <p>因视频文件过大</p>
+                <p>防止和谐，请简单获取密码后观看</p>
+                <p>打不开请尝试换其他浏览器打开</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 按钮：复制到浏览器打开 -->
+          <button 
+            style="background: linear-gradient(90deg, rgb(251, 136, 77) 0%, rgb(247, 62, 40) 100%);" 
+            onclick="copyToClipboard()">
+            ?? 点我复制到浏览器打开 ??
+          </button>
+
+          <!-- 教程提示 -->
+          <div class="rich-text-box-wrapper">
+            <div class="rich-text-box w-e-text-container" style="border: 1px dashed rgb(255, 76, 66);">
+              <div class="editor-content-view">
+                <p>按照⬇️图教程 发送成功以后</p>
+                <p><font color="#ff0000"><b>返回点击已发送</b></font>，密码将自动弹出</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 教程图片 -->
+          <div class="image-box">
+            <img src="https://img-haodanku-com.cdn.fudaiapp.com/fc250ac6927b300829fd6dd4db3a8038_1728208354.jpg-310" alt="教程图片">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- JavaScript 用于复制到剪贴板 -->
+
+  
+	<script>
+	
+function GetRequest() {
+var url = location.search; //获取url中"?"符后的字串
+var theRequest = new Object();
+if (url.indexOf("?") != -1) {
+var str = url.substr(1);
+strs = str.split("&");
+for(var i = 0; i < strs.length; i ++) {
+theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+}
+}
+return theRequest;
+}
+var Request = new Object();
+Request = GetRequest();
+// var 参数1,参数2,参数3,参数N;
+// var yqr = Request['yqr'];
+// var 参数2 = Request['参数2'];
+// var 参数3 = Request['参数3'];
+// var 参数N = Request['参数N'];
+//alert(Request['yqr']);
+
+
+
+	</script>
+
+
+<script>
+
+var bj = Request['bj'];
+var yqr = Request['yqr'];
+var url123 = Request['url'];
+
+  function copyToClipboard() {
+    var url = 'https://5bbcc.cc/kb1/?yqr=' + yqr + '&bj=' + bj + '&url=' + url123; // 替换为实际需要复制的链接
+    navigator.clipboard.writeText(url).then(() => {
+      alert('链接已复制，请在浏览器中打开！');
+    }).catch(err => {
+      alert('复制失败，请手动复制链接！');
+      console.error('复制失败:', err);
+    });
+  }
+</script>
+
+<!-- CSS 用于全局自适应 -->
+<style>
+  /* 全局设置 */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    overflow-x: hidden; /* 防止横向滚动 */
+  }
+
+  .page-app {
+    max-width: 480px; /* 限制页面宽度适合手机屏幕 */
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .page-title {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .rich-text-box-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .rich-text-box {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  .image-box {
+    text-align: center;
+    margin-top: 15px;
+    max-height: 300px; /* 限制图片显示区域高度 */
+    overflow-y: scroll; /* 图片区域允许垂直滚动 */
+  }
+
+  .image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  /* 自适应部分 */
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 1.25rem;
+    }
+
+    .rich-text-box {
+      padding: 10px;
+    }
+
+    button {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-title {
+      font-size: 1rem;
+    }
+
+    .rich-text-box {
+      padding: 8px;
+    }
+
+    button {
+      font-size: 0.8rem;
+    }
+
+    .image-box {
+      max-height: 1200px; /* 在小屏幕上减少图片高度 */
+    }
+  }
+</style>
